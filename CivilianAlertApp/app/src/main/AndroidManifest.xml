@@ -32,8 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Omitted since included above -->
-        <!-- <activity android:name=".GenerateQRActivity"></activity> -->
         <activity android:name=".QR_Display"></activity>
     </application>
 
