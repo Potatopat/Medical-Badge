@@ -96,11 +96,11 @@ public class MainActivity extends AppCompatActivity {
     public void openQR(View view) {
         // Do something in response to button
 
-        try {
+        /*try {
             makeCall();
         } catch (URISyntaxException e) {
             e.printStackTrace();
-        }
+        }*/
 
         Intent intent = new Intent(MainActivity.this, QR_Display.class);
         startActivity(intent);
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         // TODO: MAKE SURE FILE PATH IS CORRECT FOR DEPLOYING DEVICE
         Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
-                new URI("http://mypages.iit.edu/~pbartman/Hackathon/Response.xml")).create();
+                new URI("app/src/main/Response.xml")).create();
 
         Log.v("Twilio call", call.getSid());
     }
