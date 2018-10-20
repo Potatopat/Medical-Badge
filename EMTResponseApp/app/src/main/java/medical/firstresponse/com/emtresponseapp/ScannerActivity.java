@@ -52,6 +52,7 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
         } else {
             builder = new AlertDialog.Builder(this);
         }
+
         builder.setTitle("Alert")
                 .setMessage(rawResult.getText())
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
@@ -64,6 +65,5 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
         // If you would like to resume scanning, call this method below:
         mScannerView.resumeCameraPreview(this);
-
     }
 }
