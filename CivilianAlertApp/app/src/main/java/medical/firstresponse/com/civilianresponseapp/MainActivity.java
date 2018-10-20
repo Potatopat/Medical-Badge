@@ -91,6 +91,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * for opening up QR code
+     * @param view
+     */
+    public void openQR(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(MainActivity.this, QR_Display.class);
+        startActivity(intent);
+    }
+
     public static class MakePhoneCall {
         public static final String ACCOUNT_SID = "ACf3723639b9db9b2f947802c4da67832c";
         public static final String AUTH_TOKEN = "36a967029cbc835c3a8ab037cce979fe";
@@ -98,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
         public static void main(String[] args) throws URISyntaxException {
             Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-            /*GenerateQRActivity gQR = new GenerateQRActivity();
             String from = "+18722190190";
             String to = "+12245454352";
 
@@ -106,12 +115,6 @@ public class MainActivity extends AppCompatActivity {
                     new URI("")).create();
 
             Log.v("call", call.getSid());
-        }
-
-        public void openQR(View view) {
-            // Do something in response to button
-            Intent intent = new Intent(MainActivity.this, QR_Display.class);
-            startActivity(intent);
         }
     }
 
