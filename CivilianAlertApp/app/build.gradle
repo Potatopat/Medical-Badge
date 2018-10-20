@@ -29,6 +29,10 @@ android {
 }
 
 dependencies {
+    // added dependencies for barcode generator
+    implementation "com.google.zxing:core:3.3.0"
+    implementation 'com.google.zxing:javase:3.3.0'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
