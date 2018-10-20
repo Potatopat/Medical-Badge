@@ -2,9 +2,15 @@
   "Patient" : [
     {
       "Name" : "Kevin Peter",
-      "Doctor" : "Dr. Rudy Jones",
+      "Doctor" : [
+        {
+          "Name": "Dr. Rudy Jones",
+          "Number": "2242223214"
+        }
+      ],
       "Allergies" : "Tree Nuts",
       "Pre-existing Conditions" : "Heart Disease",
+      "Medications" : "Advil",
     "Emergency Contact" : [
         {
         "Name" : "Dickson Peter",

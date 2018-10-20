@@ -32,6 +32,8 @@ dependencies {
     // added dependencies for barcode generator
     implementation "com.google.zxing:core:3.3.0"
     implementation 'com.google.zxing:javase:3.3.0'
+    // added dependencies for twilio java helper library
+    implementation group: "com.twilio.sdk", name: "twilio", version: "7.17.+"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'

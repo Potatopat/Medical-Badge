@@ -13,11 +13,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.lang.String;
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Call;
+import com.twilio.type.PhoneNumber;
 
 /**
  * https://developer.android.com/training/beam-files/send-files#java
  */
 //import com.google.zxing.WriterException;
+import com.google.zxing.WriterException;
+
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -82,25 +91,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public static class MakePhoneCall {
+        public static final String ACCOUNT_SID = "ACf3723639b9db9b2f947802c4da67832c";
+        public static final String AUTH_TOKEN = "36a967029cbc835c3a8ab037cce979fe";
 
-        /*GenerateQRActivity gQR = new GenerateQRActivity();
+        public static void main(String[] args) throws URISyntaxException {
+            Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        try {
-            byte[] data = gQR.generateQRCodeImage("QR Code", 350, 350, QR_CODE_IMAGE_PATH);
-            Log.v("wow", "we did it! " + data);
+            /*GenerateQRActivity gQR = new GenerateQRActivity();
+            String from = "+18722190190";
+            String to = "+12245454352";
 
-        } catch (WriterException e) {
-            Log.v("wow","Could not generate QR Code (WriterException)... " + e.getMessage());
-        } catch (IOException e) {
-            Log.v("wow","Could not generate QR Code (IOException)... " + e.getMessage());
+            Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
+                    new URI("")).create();
+
+            Log.v("call", call.getSid());
         }
-        */
 
         public void openQR(View view) {
             // Do something in response to button
             Intent intent = new Intent(MainActivity.this, QR_Display.class);
             startActivity(intent);
         }
+    }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
