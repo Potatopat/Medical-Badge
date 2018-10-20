@@ -30,8 +30,6 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-import medical.firstresponse.com.civilianresponseapp.GenerateQRActivity;
-
 public class MainActivity extends AppCompatActivity {
 
     NfcAdapter mNfcAdapter;
