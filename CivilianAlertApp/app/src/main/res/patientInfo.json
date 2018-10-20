@@ -1,0 +1,16 @@
+{
+  "Patient" : [
+    {
+      "Name" : "Kevin Peter",
+      "Doctor" : "Dr. Rudy Jones",
+      "Allergies" : "Tree Nuts",
+      "Pre-existing Conditions" : "Heart Disease",
+    "Emergency Contact" : [
+        {
+        "Name" : "Dickson Peter",
+        "Number" : "2245554321"
+        }
+      ]
+    }
+  ]
+}

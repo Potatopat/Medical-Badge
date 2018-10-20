@@ -16,12 +16,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <ImageView
+                android:id="@+id/qrCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Omitted since included above -->
+        <!--<activity android:name=".GenerateQRActivity"></activity>-->
     </application>
 
 </manifest>
