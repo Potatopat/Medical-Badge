@@ -97,11 +97,34 @@ public class MainActivity extends AppCompatActivity {
      */
     public void openQR(View view) {
         // Do something in response to button
+
+        try {
+            makeCall();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+
         Intent intent = new Intent(MainActivity.this, QR_Display.class);
         startActivity(intent);
     }
 
-    public static class MakePhoneCall {
+
+    public void makeCall() throws URISyntaxException {
+        String ACCOUNT_SID = "ACf3723639b9db9b2f947802c4da67832c";
+        String AUTH_TOKEN = "36a967029cbc835c3a8ab037cce979fe";
+
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+
+        String from = "+18722190190";
+        String to = "+12245454352";
+
+        Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
+                new URI("")).create();
+
+        Log.v("call", call.getSid());
+    }
+
+    /*public static class MakePhoneCall {
         public static final String ACCOUNT_SID = "ACf3723639b9db9b2f947802c4da67832c";
         public static final String AUTH_TOKEN = "36a967029cbc835c3a8ab037cce979fe";
 
@@ -116,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
             Log.v("call", call.getSid());
         }
-    }
+    }*/
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
