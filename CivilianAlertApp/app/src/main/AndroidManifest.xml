@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
@@ -16,12 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <ImageView
+
+            <!--
+                <ImageView
                 android:id="@+id/qrCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:layout_centerHorizontal="true"/>
+            -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +33,8 @@
             </intent-filter>
         </activity>
         <!-- Omitted since included above -->
-        <!--<activity android:name=".GenerateQRActivity"></activity>-->
+        <!-- <activity android:name=".GenerateQRActivity"></activity> -->
+        <activity android:name=".QR_Display"></activity>
     </application>
 
 </manifest>

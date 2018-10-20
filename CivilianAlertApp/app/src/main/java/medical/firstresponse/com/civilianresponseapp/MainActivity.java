@@ -1,31 +1,28 @@
 package medical.firstresponse.com.civilianresponseapp;
 
-<<<<<<< Updated upstream
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
-=======
->>>>>>> Stashed changes
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-<<<<<<< Updated upstream
 /**
  * https://developer.android.com/training/beam-files/send-files#java
  */
-=======
-import com.google.zxing.WriterException;
+//import com.google.zxing.WriterException;
 
 import java.io.IOException;
 
 import medical.firstresponse.com.civilianresponseapp.GenerateQRActivity;
 
->>>>>>> Stashed changes
 public class MainActivity extends AppCompatActivity {
 
     NfcAdapter mNfcAdapter;
@@ -40,10 +37,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        TextView tv = (TextView) findViewById(R.id.editText);
+        //tv.setText(stringFromJNI());
 
-<<<<<<< Updated upstream
         // NFC isn't available on the device
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_NFC)) {
             /*
@@ -85,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
             return mFileUris;
         }
     }
-=======
-
 
 
         /*GenerateQRActivity gQR = new GenerateQRActivity();
@@ -101,7 +95,12 @@ public class MainActivity extends AppCompatActivity {
             Log.v("wow","Could not generate QR Code (IOException)... " + e.getMessage());
         }
         */
->>>>>>> Stashed changes
+
+        public void openQR(View view) {
+            // Do something in response to button
+            Intent intent = new Intent(MainActivity.this, QR_Display.class);
+            startActivity(intent);
+        }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
