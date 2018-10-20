@@ -1,12 +1,9 @@
 package medical.firstresponse.com.civilianresponseapp;
 
-<<<<<<< Updated upstream
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
-=======
->>>>>>> Stashed changes
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -20,11 +17,9 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Call;
 import com.twilio.type.PhoneNumber;
 
-<<<<<<< Updated upstream
 /**
  * https://developer.android.com/training/beam-files/send-files#java
  */
-=======
 import com.google.zxing.WriterException;
 
 import org.json.JSONObject;
@@ -33,7 +28,6 @@ import java.io.IOException;
 
 import medical.firstresponse.com.civilianresponseapp.GenerateQRActivity;
 
->>>>>>> Stashed changes
 public class MainActivity extends AppCompatActivity {
 
     NfcAdapter mNfcAdapter;
@@ -51,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.sample_text);
         tv.setText(stringFromJNI());
 
-<<<<<<< Updated upstream
         // NFC isn't available on the device
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_NFC)) {
             /*
@@ -94,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public class MakePhoneCall {
+    public static class MakePhoneCall {
         public static final String ACCOUNT_SID = "ACf3723639b9db9b2f947802c4da67832c";
         public static final String AUTH_TOKEN = "36a967029cbc835c3a8ab037cce979fe";
 
@@ -107,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
                     new URI("")).create();
 
-            Log.v(call.getSid());
+            Log.v("call", call.getSid());
         }
     }
 
