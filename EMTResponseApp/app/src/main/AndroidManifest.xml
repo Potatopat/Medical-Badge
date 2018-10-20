@@ -11,17 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ScannerActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <!-- NFC Stuff -->
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.CATEGORY_DEFAULT" />
+                <!--<data android:mimeType="mime-type" />-->
             </intent-filter>
         </activity>
-        <!--<activity
+        <activity
             android:name=".ScannerActivity"
             android:label="@string/title_activity_scanner"
-            android:theme="@style/AppTheme.NoActionBar"></activity>-->
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
