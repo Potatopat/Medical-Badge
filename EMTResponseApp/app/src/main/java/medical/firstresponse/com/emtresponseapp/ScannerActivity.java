@@ -42,5 +42,6 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
         // If you would like to resume scanning, call this method below:
         mScannerView.resumeCameraPreview(this);
+
     }
 }

@@ -21,6 +21,8 @@ import android.widget.TextView;
 =======
 import com.google.zxing.WriterException;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 
 import medical.firstresponse.com.civilianresponseapp.GenerateQRActivity;
@@ -85,23 +87,10 @@ public class MainActivity extends AppCompatActivity {
             return mFileUris;
         }
     }
-=======
 
 
 
-        /*GenerateQRActivity gQR = new GenerateQRActivity();
 
-        try {
-            byte[] data = gQR.generateQRCodeImage("QR Code", 350, 350, QR_CODE_IMAGE_PATH);
-            Log.v("wow", "we did it! " + data);
-
-        } catch (WriterException e) {
-            Log.v("wow","Could not generate QR Code (WriterException)... " + e.getMessage());
-        } catch (IOException e) {
-            Log.v("wow","Could not generate QR Code (IOException)... " + e.getMessage());
-        }
-        */
->>>>>>> Stashed changes
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
