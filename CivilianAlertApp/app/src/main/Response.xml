@@ -1,0 +1,4 @@
+<Response>
+    <Say voice="Responder">There has been an incident at 900 W Harrison St. and you are listed as the emergency contact. They are currently en-route to Rush Hospital.</Say>
+    <!--<Play> </Play> -->
+</Response>

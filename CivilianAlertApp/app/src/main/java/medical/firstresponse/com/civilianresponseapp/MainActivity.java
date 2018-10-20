@@ -111,8 +111,9 @@ public class MainActivity extends AppCompatActivity {
             String from = "+18722190190";
             String to = "+12245454352";
 
+            // MAKE SURE FILE PATH IS CORRECT FOR DEPLOYING DEVICE
             Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
-                    new URI("")).create();
+                    new URI("/Users/mattstevenson/Desktop/FirstNet_Hackathon/Medical-Badge/CivilianAlertApp/app/src/main/Response.xml")).create();
 
             Log.v("call", call.getSid());
         }
