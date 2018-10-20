@@ -13,6 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.lang.String;
+import com.twilio.Twilio;
+import com.twilio.rest.api.v2010.account.Call;
+import com.twilio.type.PhoneNumber;
 
 <<<<<<< Updated upstream
 /**
@@ -85,6 +91,23 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Uri[] createBeamUris(NfcEvent event) {
             return mFileUris;
+        }
+    }
+
+    public class MakePhoneCall {
+        public static final String ACCOUNT_SID = "ACf3723639b9db9b2f947802c4da67832c";
+        public static final String AUTH_TOKEN = "36a967029cbc835c3a8ab037cce979fe";
+
+        public static void main(String[] args) throws URISyntaxException {
+            Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+
+            String from = "+18722190190";
+            String to = "+12245454352";
+
+            Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
+                    new URI("")).create();
+
+            Log.v(call.getSid());
         }
     }
 
