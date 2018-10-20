@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void makeCall() throws URISyntaxException {
+    public static void makeCall() throws URISyntaxException {
         String ACCOUNT_SID = "ACf3723639b9db9b2f947802c4da67832c";
         String AUTH_TOKEN = "36a967029cbc835c3a8ab037cce979fe";
 
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
                 new URI("http://mypages.iit.edu/~pbartman/Hackathon/Response.xml")).create();
 
-        Log.v("call", call.getSid());
+        Log.v("Twilio call", call.getSid());
     }
 
     /*public static class MakePhoneCall {
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
             // MAKE SURE FILE PATH IS CORRECT FOR DEPLOYING DEVICE
             Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
-                    new URI("/Users/mattstevenson/Desktop/FirstNet_Hackathon/Medical-Badge/CivilianAlertApp/app/src/main/Response.xml")).create();
+                    new URI("http://mypages.iit.edu/~pbartman/Hackathon/Response.xml")).create();
 
             Log.v("call", call.getSid());
         }
